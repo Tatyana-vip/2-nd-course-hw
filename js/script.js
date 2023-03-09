@@ -7,12 +7,12 @@ alert(a);
 
 // Задание 2
 
-let release = 2007;
+const release = 2007;
 alert(`Год выпуска первого iPhone ${release}`);
 
 // Задание 3
 
-let creator = 'Брендан Айк';
+const creator = 'Брендан Айк';
 alert(`Создатель языка JavaScript ${creator}`);
 
 // Задание 4
@@ -43,12 +43,12 @@ alert(c);
 // Задание 7
 
 let num = 1;
+num += 5;
+num -= 3;
+num *= 7;
+num /= 3;
 num = ++num;
-num = ++num;
-num = ++num;
-num = ++num;
-num = ++num;
-num = ++num;
+num = --num;
 alert(num);
 
 // Задание 8
