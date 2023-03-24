@@ -3,18 +3,18 @@
 let password = 'пароль';
 let enterPassword = prompt('Введите пароль');
 
-enterPassword === password ? alert('Пароль введен верно') : alert('Пароль введен неправильно');
+alert(enterPassword === password ? 'Пароль введен верно' : 'Пароль введен неправильно');
 
 // Задание 2
 
 let c = 7;
-c > 0 && c < 10 ? console.log('Верно') : console.log('Неверно');
+console.log(c > 0 && c < 10 ? 'Верно' : 'Неверно');
 
 // Задание 3
 
 let d = 700;
 let e = 10;
-d > 100 || e > 100 ? console.log('Верно') : console.log('Неверно');
+console.log(d > 100 || e > 100 ? 'Верно' : 'Неверно');
 
 // Задание 4
 
@@ -24,7 +24,7 @@ alert(a + b);
 
 // Задание 5
 
-let monthNumber = 12;
+let monthNumber = 13;
 
 switch (monthNumber) {
     case 12:
@@ -48,7 +48,7 @@ switch (monthNumber) {
         console.log('Осень');
         break;
     default:
-        monthNumber => 13;
+        console.log('Такого месяца не существует');
         break;                   
 }
 
