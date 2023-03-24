@@ -1,87 +1,92 @@
 // Задание 1
 
-let a = 10;
-alert(a);
-a = 20;
-alert(a);
+let password = 'пароль';
+let enterPassword = prompt('Введите пароль');
+
+alert(enterPassword === password ? 'Пароль введен верно' : 'Пароль введен неправильно');
 
 // Задание 2
 
-const release = 2007;
-alert(`Год выпуска первого iPhone ${release}`);
+let c = 7;
+console.log(c > 0 && c < 10 ? 'Верно' : 'Неверно');
 
 // Задание 3
 
-const creator = 'Брендан Айк';
-alert(`Создатель языка JavaScript ${creator}`);
+let d = 700;
+let e = 10;
+console.log(d > 100 || e > 100 ? 'Верно' : 'Неверно');
 
 // Задание 4
 
-let b = 10;
-let c = 2;
-let d = b + c;
-alert(d);
-d = b - c;
-alert(d);
-d = b * c;
-alert(d);
-d = b / c;
-alert(d);
+let a = Number('2');
+let b = Number('3');
+alert(a + b);
 
-//Задание 5
+// Задание 5
 
-let result = c**5;
-alert(result);
+let monthNumber = 13;
 
-// Задание 6
-
-a = 9;
-b = 2;
-c = a / b;
-alert(c);
+switch (monthNumber) {
+    case 12:
+    case 1:
+    case 2:                
+        console.log('Зима');    
+        break;
+    case 3:
+    case 4:
+    case 5:                
+        console.log('Весна');
+        break;
+    case 6:
+    case 7:
+    case 8:                
+        console.log('Лето');
+        break;
+    case 9:
+    case 10:
+    case 11:                
+        console.log('Осень');
+        break;
+    default:
+        console.log('Такого месяца не существует');
+        break;                   
+}
 
 // Задание 7
 
-let num = 1;
-num += 5;
-num -= 3;
-num *= 7;
-num /= 3;
-++num;
---num;
-alert(num);
+let num = Number(prompt('Пожалуйста, введите любое число'));
+
+if (num % 2 === 0) {
+    alert('Число четное');
+}
+else if (num % 2 === 1) {
+    alert('Число нечетное');
+}
+else {
+    alert(num);
+}
 
 // Задание 8
 
-let age = prompt('Сколько Вам лет?');
-alert (age);
+let clientOS = 1;
 
-// Задание 9.0
+if (clientOS === 0) {
+        console.log('Установите версию приложения для iOS по ссылке');
+} else if (clientOS === 1) {
+        console.log('Установите версию приложения для Android по ссылке');
+}
 
-const user = {
-name: 'Василий',
-age: 25,
-isAdmin: false
-};
+// Задание 9
 
-// Задание 9.1
+let clientDeviceOS = 1;
+let clientDeviceYear = 2014;
 
-user['city of residence'] = 'Москва';
-
-// Задание 9.2
-
-user.age = 27;
-
-// Задание 9.3
-
-delete user['city of residence'];
-
-// Задание 9.4
-
-let info = prompt('Какую информацию хотите узнать о пользователе?');
-alert(user[info]);
-
-// Задание 10
-
-let userName = prompt('Как Вас зовут?');
-alert(`Привет, ${userName}!`);
+if (clientDeviceOS === 0 && clientDeviceYear >= 2015) {
+        console.log('Установите версию приложения для iOS по ссылке');
+} else if (clientDeviceOS === 0 && clientDeviceYear < 2015) {
+        console.log('Установите облегченную версию приложения для iOS по ссылке');
+} else if (clientDeviceOS === 1 && clientDeviceYear >= 2015) {
+        console.log('Установите версию приложения для Android по ссылке');
+} else {
+    console.log('Установите облегченную версию приложения для Android по ссылке');
+}
