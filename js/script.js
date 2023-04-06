@@ -1,92 +1,51 @@
 // Задание 1
 
-let password = 'пароль';
-let enterPassword = prompt('Введите пароль');
+let a = 0;
 
-alert(enterPassword === password ? 'Пароль введен верно' : 'Пароль введен неправильно');
+while (a < 2) {
+    console.log('Привет');
+    a++;
+}
 
 // Задание 2
 
-let c = 7;
-console.log(c > 0 && c < 10 ? 'Верно' : 'Неверно');
+let b = 1;
+
+while (b <= 5) {
+    console.log(b);
+    b++;
+}
 
 // Задание 3
 
-let d = 700;
-let e = 10;
-console.log(d > 100 || e > 100 ? 'Верно' : 'Неверно');
+let c = 7;
+
+while (c <= 22) {
+    console.log(c);
+    c++;
+}
 
 // Задание 4
 
-let a = Number('2');
-let b = Number('3');
-alert(a + b);
+const obj = {
+	Коля: 200,
+	Вася: 300,
+	Петя: 400
+}
+
+for (const key in obj) {
+    alert(key + " — зарплата " + obj[key] + " долларов.");
+}
 
 // Задание 5
 
-let monthNumber = 13;
-
-switch (monthNumber) {
-    case 12:
-    case 1:
-    case 2:                
-        console.log('Зима');    
-        break;
-    case 3:
-    case 4:
-    case 5:                
-        console.log('Весна');
-        break;
-    case 6:
-    case 7:
-    case 8:                
-        console.log('Лето');
-        break;
-    case 9:
-    case 10:
-    case 11:                
-        console.log('Осень');
-        break;
-    default:
-        console.log('Такого месяца не существует');
-        break;                   
+for (let n = 1000, num = 0; n >= 50; num++) {
+    n /= 2;
+    alert(n);
 }
 
-// Задание 7
+// Задание 6
 
-let num = Number(prompt('Пожалуйста, введите любое число'));
-
-if (num % 2 === 0) {
-    alert('Число четное');
-}
-else if (num % 2 === 1) {
-    alert('Число нечетное');
-}
-else {
-    alert(num);
-}
-
-// Задание 8
-
-let clientOS = 1;
-
-if (clientOS === 0) {
-        console.log('Установите версию приложения для iOS по ссылке');
-} else if (clientOS === 1) {
-        console.log('Установите версию приложения для Android по ссылке');
-}
-
-// Задание 9
-
-let clientDeviceOS = 1;
-let clientDeviceYear = 2014;
-
-if (clientDeviceOS === 0 && clientDeviceYear >= 2015) {
-        console.log('Установите версию приложения для iOS по ссылке');
-} else if (clientDeviceOS === 0 && clientDeviceYear < 2015) {
-        console.log('Установите облегченную версию приложения для iOS по ссылке');
-} else if (clientDeviceOS === 1 && clientDeviceYear >= 2015) {
-        console.log('Установите версию приложения для Android по ссылке');
-} else {
-    console.log('Установите облегченную версию приложения для Android по ссылке');
-}
+for (let dayNumber = 7; dayNumber <= 31; dayNumber += 7) { 
+          console.log(`Сегодня пятница, ${dayNumber}-е число. Необходимо подготовить отчет.`); 
+      }
