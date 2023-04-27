@@ -1,51 +1,106 @@
 // Задание 1
 
-let a = 0;
-
-while (a < 2) {
-    console.log('Привет');
-    a++;
+function min(a, b) {
+    return a < b ? a : b;
 }
+
+console.log(min(8, 4));
 
 // Задание 2
 
-let b = 1;
-
-while (b <= 5) {
-    console.log(b);
-    b++;
+function evenOrOdd(n) {
+  return n % 2 == 0 ? `Число четное` : `Число нечетное`;
 }
+
+console.log(evenOrOdd(3));
 
 // Задание 3
 
-let c = 7;
+// 3.1.
 
-while (c <= 22) {
-    console.log(c);
-    c++;
+function outputSquareNumber(num) {
+	console.log(num ** 2);
 }
+
+outputSquareNumber(3);
+
+// 3.2.
+
+function returnSquareNumber(num) {
+    return num ** 2;
+}
+
+console.log(returnSquareNumber(5));
 
 // Задание 4
 
-const obj = {
-	Коля: 200,
-	Вася: 300,
-	Петя: 400
+function printMessage() {
+    let age = Number(prompt("Сколько Вам лет?"));
+
+    if (age < 0) {
+        alert("Вы ввели неправильное значение");
+    } else if (age >= 0 && age <= 12) {
+        alert("Привет, друг!");
+    } else {
+        alert("Добро пожаловать!");
+    }
 }
 
-for (const key in obj) {
-    alert(key + " — зарплата " + obj[key] + " долларов.");
-}
+printMessage();
 
 // Задание 5
 
-for (let n = 1000, num = 0; n >= 50; num++) {
-    n /= 2;
-    alert(n);
+let mult = function(a, b) {
+
+    if (isNaN(a) || isNaN(b)) {
+        console.log("Одно или оба значения не являются числом");
+    } else {
+        return a * b;
+    }   
 }
+
+console.log(mult(3, 'br'));
 
 // Задание 6
 
-for (let dayNumber = 7; dayNumber <= 31; dayNumber += 7) { 
-          console.log(`Сегодня пятница, ${dayNumber}-е число. Необходимо подготовить отчет.`); 
-      }
+function inputSomeValue() {
+    let n = prompt("Введите число");
+
+    if (isNaN(n)) {
+        alert("Переданный параметр не является числом");
+    } else {
+        let m = n ** 3;
+        alert(n + " в кубе равняется " + m);
+    }
+}  
+
+inputSomeValue();
+
+// Задание 7
+
+function getAreaCircle() {
+    return Math.PI * this.radius ** 2;
+  }
+
+function getPerimeterCircle() {
+    return 2 * Math.PI * this.radius;
+  }
+
+  const circle1 = {
+    radius: 3,
+  
+    getArea: getAreaCircle,
+    getPerimeter: getPerimeterCircle,
+  };
+  
+  const circle2 = {
+    radius: 5,
+  
+    getArea: getAreaCircle,
+    getPerimeter: getPerimeterCircle,
+  };
+
+console.log(circle1.getArea());
+console.log(circle1.getPerimeter());
+console.log(circle2.getArea());
+console.log(circle2.getPerimeter());

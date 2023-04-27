@@ -52,7 +52,7 @@ a:hover {
     font-weight: 700;
 }
 
-.top__button {
+.top__button, .game-card__button {
     font-family: "Montserrat", sans-serif;
     display: block;
     width: 234px;
@@ -67,7 +67,7 @@ a:hover {
     cursor: pointer;
 }
 
-.top__button:hover {
+.top__button:hover, .game-card__button:hover {
     background: #EB443F;
     cursor: url(img/pointer.png), pointer;
 }
@@ -125,6 +125,55 @@ a:hover {
     color: #FFFFFF;
 }
 
+.played-games {
+    padding-top: 234px;
+    padding-bottom: 234px;
+}
+
+.game-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 32px;
+    align-items: center;
+}
+
+.game-card__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 59px;
+    color: #FFFFFF;
+    margin-bottom: 32px;
+}
+
+.game-card__text {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 32px;
+    color: #FFFFFF;
+    width: 584px;    
+    margin-bottom: 32px;
+}
+
+.game-card__img {
+    text-align: right;
+}
+
+.game-card__img img {
+    max-width: 100%;
+}
+
+@media (max-width: 1200px) {
+    .game-card {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 64px;
+        justify-items: center;
+    }
+
+    .game-card__text {
+        width: 100%;
+    }
+}
+
 @media (max-width: 1024px) {
     .top {
         height: 850px;
@@ -180,12 +229,31 @@ a:hover {
         margin-bottom: 32px;
     }
 
-    .top__button {
+    .top__button, .game-card__button {
         margin: 0 auto;
     }
 
     .game__content {
         gap: 16px;
+    }
+
+    .played-games {
+        padding-top: 51px;
+        padding-bottom: 85px;
+    }
+
+    .game-card__description {
+        text-align: center;
+    }
+
+    .game-card__title {
+        font-size: 32px;
+        line-height: 39px;
+    }
+
+    .game-card__text {
+        font-size: 14px;
+        line-height: 22px;
     }
 }
 
