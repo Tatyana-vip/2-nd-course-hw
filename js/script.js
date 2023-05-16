@@ -1,106 +1,134 @@
 // Задание 1
 
-function min(a, b) {
-    return a < b ? a : b;
-}
+const numbs = [1, 5, 4, 10, 0, 3];
 
-console.log(min(8, 4));
+for (let i = 0; i < numbs.length; i++) {
+	console.log(numbs[i]);
+	if (numbs[i] == 10) break;
+}
 
 // Задание 2
 
-function evenOrOdd(n) {
-  return n % 2 == 0 ? `Число четное` : `Число нечетное`;
-}
+const arr = [1, 5, 4, 10, 0, 3];
 
-console.log(evenOrOdd(3));
+console.log(arr.indexOf(4));
 
 // Задание 3
 
-// 3.1.
+const elements = [1, 3, 5, 10, 20];
 
-function outputSquareNumber(num) {
-	console.log(num ** 2);
-}
+let str = elements.join(' ');
 
-outputSquareNumber(3);
-
-// 3.2.
-
-function returnSquareNumber(num) {
-    return num ** 2;
-}
-
-console.log(returnSquareNumber(5));
+console.log(str);
 
 // Задание 4
 
-function printMessage() {
-    let age = Number(prompt("Сколько Вам лет?"));
+const createArr = [];
 
-    if (age < 0) {
-        alert("Вы ввели неправильное значение");
-    } else if (age >= 0 && age <= 12) {
-        alert("Привет, друг!");
-    } else {
-        alert("Добро пожаловать!");
-    }
+for (let i = 0; i < 3; i++) {
+	createArr[i] = [];
+	
+	for (let j = 0; j < 1; j++) {
+		createArr[i].push(j + 1);
+	}
 }
 
-printMessage();
+console.log(createArr);
 
 // Задание 5
 
-let mult = function(a, b) {
+const a = [1, 1, 1];
 
-    if (isNaN(a) || isNaN(b)) {
-        console.log("Одно или оба значения не являются числом");
-    } else {
-        return a * b;
-    }   
-}
-
-console.log(mult(3, 'br'));
+a.push(2, 2, 2);
+console.log(a);
 
 // Задание 6
 
-function inputSomeValue() {
-    let n = prompt("Введите число");
+const b = [9, 8, 7, 'a', 6, 5];
 
-    if (isNaN(n)) {
-        alert("Переданный параметр не является числом");
-    } else {
-        let m = n ** 3;
-        alert(n + " в кубе равняется " + m);
-    }
-}  
-
-inputSomeValue();
+b.sort().pop();
+console.log(b);
 
 // Задание 7
 
-function getAreaCircle() {
-    return Math.PI * this.radius ** 2;
+const num = [9, 8, 7, 6, 5];
+
+let userAnswer = Number(prompt('Введите число от 1 до 10'));
+
+console.log(num.includes(userAnswer));
+
+// Задание 8
+
+let line = 'abcdef';
+
+console.log(line.split('').reverse().join(''));
+
+// Задание 9
+
+const c = [[1, 2, 3,],[4, 5, 6]];
+
+let d = new Array(c.join(','));
+
+console.log(d);
+
+// Задание 10
+
+const e = [1, 2, 3, 4, 5];
+
+for (let i = 0; i < e.length - 1; i++) {
+	console.log(e[i] + e[i + 1]);
+}
+
+// Задание 11
+
+const f = [1, 2, 3, 4, 5];
+arrSquare = f.map(function(a){return a**2;});
+
+console.log(arrSquare);
+
+// Задание 12
+
+function getLengthWords(arr) {
+	return arr.map((el) => el.length);
+}
+
+console.log(getLengthWords(['слово', '', 'слог', 'длинное предложение', 'буква']));
+
+// Задание 13
+
+function filterPositive(array) {
+	return array.filter(value => value < 0);
   }
-
-function getPerimeterCircle() {
-    return 2 * Math.PI * this.radius;
-  }
-
-  const circle1 = {
-    radius: 3,
   
-    getArea: getAreaCircle,
-    getPerimeter: getPerimeterCircle,
-  };
-  
-  const circle2 = {
-    radius: 5,
-  
-    getArea: getAreaCircle,
-    getPerimeter: getPerimeterCircle,
-  };
+  console.log(filterPositive([-1, 0, 5, -10, 56]));
+  console.log(filterPositive([-25, 25, 0, -1000, -2]));
 
-console.log(circle1.getArea());
-console.log(circle1.getPerimeter());
-console.log(circle2.getArea());
-console.log(circle2.getPerimeter());
+// Задание 14
+
+const generateArray = (length, max) => (
+	[...new Array(length)]
+	  .map(() => Math.round(Math.random() * max))
+  );
+  
+const numbers = generateArray(10, 10);
+
+let evens = numbers.filter(function(element) {
+	return element %2 == 0 && element > 0;
+	});
+
+console.log(numbers);  
+console.log(evens);
+
+// Задание 15
+
+const y = (length, max) => (
+	[...new Array(length)]
+	  .map(() => Math.round(Math.random() * max) + 1)
+  );
+  
+const m = y(6, 10);
+
+const n = m.reduce((a, b) => a + b) / m.length;
+
+console.log(m);
+console.log(n);
