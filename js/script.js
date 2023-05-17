@@ -37,17 +37,17 @@ console.log(createArr);
 
 // Задание 5
 
-const a = [1, 1, 1];
+const addValues = [1, 1, 1];
 
-a.push(2, 2, 2);
-console.log(a);
+addValues.push(2, 2, 2);
+console.log(addValues);
 
 // Задание 6
 
-const b = [9, 8, 7, 'a', 6, 5];
+const sortingArray = [9, 8, 7, 'a', 6, 5];
 
-b.sort().pop();
-console.log(b);
+sortingArray.sort().pop();
+console.log(sortingArray);
 
 // Задание 7
 
@@ -65,26 +65,26 @@ console.log(line.split('').reverse().join(''));
 
 // Задание 9
 
-const c = [[1, 2, 3,],[4, 5, 6]];
+const nestedArray = [[1, 2, 3,],[4, 5, 6]];
 
-let d = new Array(c.join(','));
+let getNestedArrays = nestedArray.flat();
 
-console.log(d);
+console.log(getNestedArrays);
 
 // Задание 10
 
-const e = [1, 2, 3, 4, 5];
+const sumArrayElements = [1, 2, 3, 4, 5];
 
-for (let i = 0; i < e.length - 1; i++) {
-	console.log(e[i] + e[i + 1]);
+for (let i = 0; i < sumArrayElements.length - 1; i++) {
+	console.log(sumArrayElements[i] + sumArrayElements[i + 1]);
 }
 
 // Задание 11
 
-const f = [1, 2, 3, 4, 5];
-arrSquare = f.map(function(a){return a**2;});
+const arrayOfIntegers = [1, 2, 3, 4, 5];
+arraySquare = arrayOfIntegers.map(function(a){return a**2;});
 
-console.log(arrSquare);
+console.log(arraySquare);
 
 // Задание 12
 
@@ -121,14 +121,14 @@ console.log(evens);
 
 // Задание 15
 
-const y = (length, max) => (
+const generateArr = (length, max) => (
 	[...new Array(length)]
 	  .map(() => Math.round(Math.random() * max) + 1)
   );
   
-const m = y(6, 10);
+const result = generateArr(6, 10);
 
-const n = m.reduce((a, b) => a + b) / m.length;
+const arithmeticMeanOfElements = result.reduce((a, b) => a + b) / result.length;
 
-console.log(m);
-console.log(n);
+console.log(result);
+console.log(arithmeticMeanOfElements);
