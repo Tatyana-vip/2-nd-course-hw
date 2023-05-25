@@ -125,9 +125,14 @@ a:hover {
     color: #FFFFFF;
 }
 
-.played-games {
+.played-games_1 {
     padding-top: 234px;
     padding-bottom: 234px;
+}
+
+.played-games_2 {
+    padding-top: 239px;
+    padding-bottom: 239px;    
 }
 
 .game-card {
@@ -154,8 +159,12 @@ a:hover {
     margin-bottom: 32px;
 }
 
-.game-card__img {
+.game-card__img_1 {
     text-align: right;
+}
+
+.game-card__img_2 {
+    text-align: left;
 }
 
 .game-card__img img {
@@ -167,6 +176,10 @@ a:hover {
         grid-template-columns: repeat(1, 1fr);
         row-gap: 64px;
         justify-items: center;
+    }
+
+    .game-card__img {
+        order: 2;
     }
 
     .game-card__text {
@@ -205,8 +218,8 @@ a:hover {
 
 @media (max-width: 767px) {
     .top {
-        height: 600px;
-        background-size: 160%;
+        height: 735px;
+        padding-top: 239px;
     }
 
     .center {
@@ -234,12 +247,24 @@ a:hover {
     }
 
     .game__content {
-        gap: 16px;
+        grid-template-columns: repeat(1, 1fr);
     }
 
-    .played-games {
+    .game__item {
+        grid-column: auto;
+        width: 100%;
+        max-width: 343px;        
+        margin: 0 auto;
+    }
+
+    .played-games_1 {
         padding-top: 51px;
         padding-bottom: 85px;
+    }
+
+    .played-games_2 {
+        padding-top: 51px;
+        padding-bottom: 90px;
     }
 
     .game-card__description {
@@ -257,54 +282,15 @@ a:hover {
     }
 }
 
-@media (max-width: 600px) {
-    .top {
-        height: 1024px;
-        background-position: 31.5% 0;
-        background-size: 275%;
-        padding-top: 300px;
-    }
-
-    .game {
-        padding-top: 0;
-    }
-
-    .game__content {
-        column-gap: 0;
-    }
-    
-    .game__item {
-        grid-column: span 12;
-    }    
-}
-
 @media (max-width: 470px) {
     .top {
-        height: 735px;
         background-position: 31.5% 0;
-        background-size: 275%;
-        padding-top: 238px;
-    }
-}    
-
-@media (max-width: 370px) {
-    .top {
-        height: 600px;
-        padding-top: 120px;
-    }
-
-    .game__content {
-        gap: 16px;
+        background-size: 280%;
     }
 }
 
-@media (max-width: 310px) {
+@media (max-width: 361px) {
     .top {
-        height: 500px;
-        padding-top: 80px;
-    }
-
-    .game {
-        padding-top: 30px;
+        background-position: 31.5% 150px;
     }
 }

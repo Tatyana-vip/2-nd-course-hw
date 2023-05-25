@@ -39,22 +39,38 @@
             </div>
         </div>
     </section>
-    <section class="played-games center">
+    <section class="played-games played-games_1 center">
         <div class="played-games__card">
             <div class="game-card">
                 <div class="game-card__description">
                     <h2 class="game-card__title">Времена года!</h2>
                     <p class="game-card__text">Нажмите кнопку играть, введите номер месяца (от 1 до 12) и вы узнаете к какому времени года он относится</p>
-                    <form action="#">
+                    <form>
                         <button class="game-card__button" onclick="getSeason()">Играть!</button>
                     </form>
                 </div>
-                <div class="game-card__img">
+                <div class="game-card__img game-card__img_1">
                     <img src="img/seasons.png" alt="Времена года!">
                 </div>                
             </div>
         </div>
     </section>
+    <section class="played-games played-games_2 center">
+        <div class="played-games__card">
+            <div class="game-card">
+                <div class="game-card__img game-card__img_2">
+                    <img src="img/remember-words.png" alt="Запомни слова">
+                </div>
+                <div class="game-card__description">
+                    <h2 class="game-card__title">Запомни слова</h2>
+                    <p class="game-card__text">При нажатии на кнопку играть, вы увидите несколько слов, которые вам необходимо запомнить.</p>
+                    <form>
+                        <button class="game-card__button" onclick="rememberWords()">Играть!</button>
+                    </form>
+                </div>                                
+            </div>
+        </div>
+    </section>    
     <script>
         function getSeason() {
             let monthNumber = Number(prompt("Введите номер месяца (от 1 до 12)"));
@@ -69,6 +85,24 @@
                 alert("Осень");
             } else {
                 alert("Такого месяца не существует!");
+            }
+        }
+
+        function rememberWords() {
+
+            let words = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин'];
+            words.sort(() => Math.random() - 0.5);
+            alert(words.join(', '));
+
+            let firstWord = prompt("Чему равнялся первый элемент массива?");
+            let lastWord = prompt("Чему равнялся последний элемент массива?");
+
+            if (firstWord === words[0].toLowerCase() && lastWord === words[words.length-1].toLowerCase()) {
+                alert("Поздравляем, Вы угадали оба элемента!");
+            } else if (firstWord === words[0].toLowerCase() || lastWord === words[words.length-1].toLowerCase()) {
+                alert("Вы были близки к победе!");
+            } else {
+                alert("Вы не угадали ни одного элемента.");
             }
         }
     </script>

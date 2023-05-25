@@ -1,134 +1,96 @@
 // Задание 1
 
-const numbs = [1, 5, 4, 10, 0, 3];
-
-for (let i = 0; i < numbs.length; i++) {
-	console.log(numbs[i]);
-	if (numbs[i] == 10) break;
-}
+let str = 'js';
+console.log(str.toUpperCase());
 
 // Задание 2
 
-const arr = [1, 5, 4, 10, 0, 3];
+function searchStart(arr, str) {
+  return arr.filter(item => item.toLowerCase().startsWith(str.toLowerCase()));
+  }
 
-console.log(arr.indexOf(4));
+console.log(searchStart(['Кошка', 'Кит', 'Комар', 'Носорог'], 'ко'));
+console.log(searchStart(['яблоко', 'груша', 'гриб', 'огурец'], 'гру'));
+console.log(searchStart(['Дом', 'Банк', 'Больница', 'Театр'], 'Кино'));
 
 // Задание 3
 
-const elements = [1, 3, 5, 10, 20];
-
-let str = elements.join(' ');
-
-console.log(str);
+console.log(Math.floor(32.58884));
+console.log(Math.ceil(32.58884));
+console.log(Math.round(32.58884));
 
 // Задание 4
 
-const createArr = [];
+const arr = [52, 53, 49, 77, 21, 32];
 
-for (let i = 0; i < 3; i++) {
-	createArr[i] = [];
-	
-	for (let j = 0; j < 1; j++) {
-		createArr[i].push(j + 1);
-	}
-}
+const min = Math.min(...arr);
+const max = Math.max(...arr);
 
-console.log(createArr);
+console.log(min, max);
 
 // Задание 5
 
-const addValues = [1, 1, 1];
-
-addValues.push(2, 2, 2);
-console.log(addValues);
+function getRandomNumber(minValue, maxValue) {
+  let randomNumber = Math.floor(Math.random() * maxValue) + minValue;
+  console.log(randomNumber);
+  }
+  
+getRandomNumber(1, 10);
 
 // Задание 6
 
-const sortingArray = [9, 8, 7, 'a', 6, 5];
+function getRandomArrNumbers(num) {
+  const arr = [];
+  for (let i = 0; i < Math.floor(num / 2); i++) {
+  arr.push(Math.floor(Math.random() * num));
+  }
+  return arr;
+  }
 
-sortingArray.sort().pop();
-console.log(sortingArray);
+console.log(getRandomArrNumbers(7));
+console.log(getRandomArrNumbers(12));
 
 // Задание 7
 
-const num = [9, 8, 7, 6, 5];
+function getRandomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
 
-let userAnswer = Number(prompt('Введите число от 1 до 10'));
-
-console.log(num.includes(userAnswer));
+console.log(getRandomNumber(1, 5));
 
 // Задание 8
 
-let line = 'abcdef';
+const days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
+const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+let myDate = new Date();
+let fullDate = "Текущая дата: " + myDate.getDate() + " " + months[myDate.getMonth()] + " " + myDate.getFullYear();
 
-console.log(line.split('').reverse().join(''));
+console.log(fullDate);
 
 // Задание 9
 
-const nestedArray = [[1, 2, 3,],[4, 5, 6]];
+let currentDate = new Date();
+currentDate.setDate(currentDate.getDate() + 73);
 
-let getNestedArrays = nestedArray.flat();
-
-console.log(getNestedArrays);
+console.log(currentDate.toLocaleDateString());
 
 // Задание 10
 
-const sumArrayElements = [1, 2, 3, 4, 5];
-
-for (let i = 0; i < sumArrayElements.length - 1; i++) {
-	console.log(sumArrayElements[i] + sumArrayElements[i + 1]);
-}
-
-// Задание 11
-
-const arrayOfIntegers = [1, 2, 3, 4, 5];
-arraySquare = arrayOfIntegers.map(function(a){return a**2;});
-
-console.log(arraySquare);
-
-// Задание 12
-
-function getLengthWords(arr) {
-	return arr.map((el) => el.length);
-}
-
-console.log(getLengthWords(['слово', '', 'слог', 'длинное предложение', 'буква']));
-
-// Задание 13
-
-function filterPositive(array) {
-	return array.filter(value => value < 0);
+function formatDate(date) {
+  const weekdays = ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'];
+  const months = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
+  
+  const day = date.getDate();
+  const month = months[date.getMonth()];
+  const year = date.getFullYear();
+  const dayOfWeek = weekdays[date.getDay()];
+  
+  const hours = ('0' + date.getHours()).slice(-2);
+  const minutes = ('0' + date.getMinutes()).slice(-2);
+  const seconds = ('0' + date.getSeconds()).slice(-2);
+  
+  return `Дата: ${day} ${month} ${year} - это ${dayOfWeek}.\nВремя: ${hours}:${minutes}:${seconds}`;
   }
   
-  console.log(filterPositive([-1, 0, 5, -10, 56]));
-  console.log(filterPositive([-25, 25, 0, -1000, -2]));
-
-// Задание 14
-
-const generateArray = (length, max) => (
-	[...new Array(length)]
-	  .map(() => Math.round(Math.random() * max))
-  );
-  
-const numbers = generateArray(10, 10);
-
-let evens = numbers.filter(function(element) {
-	return element %2 == 0 && element > 0;
-	});
-
-console.log(numbers);  
-console.log(evens);
-
-// Задание 15
-
-const generateArr = (length, max) => (
-	[...new Array(length)]
-	  .map(() => Math.round(Math.random() * max) + 1)
-  );
-  
-const result = generateArr(6, 10);
-
-const arithmeticMeanOfElements = result.reduce((a, b) => a + b) / result.length;
-
-console.log(result);
-console.log(arithmeticMeanOfElements);
+ const date = new Date();
+ console.log(formatDate(date));
