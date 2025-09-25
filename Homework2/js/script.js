@@ -30,7 +30,7 @@ alert(d);
 
 // Задание 5
 
-let result = c**5;
+let result = c ** 5;
 alert(result);
 
 // Задание 6
@@ -47,21 +47,21 @@ num += 5;
 num -= 3;
 num *= 7;
 num /= 3;
-++num;
---num;
+num++;
+num--;
 alert(num);
 
 // Задание 8
 
 let age = prompt('Сколько Вам лет?');
-alert (age);
+alert(age);
 
 // Задание 9
 
 const user = {
-name: 'Василий',
-age: 25,
-isAdmin: false
+    name: 'Василий',
+    age: 25,
+    isAdmin: false
 };
 
 // Задание 10
@@ -72,12 +72,12 @@ alert(`Привет, ${userName}!`);
 // Дополнительное задание
 
 let number = prompt('Загадайте любое число');
-let doubledNumber = Number(number) * 2;
-alert(doubledNumber);
+let doubledNumber = number * 2;
+alert(`Удваиваем загаданное число, получаем ${doubledNumber}`);
 let addTen = doubledNumber + 10;
-alert(addTen);
+alert(`К удвоенному числу прибавляем 10, получаем ${addTen}`);
 let dividedByTwo = addTen / 2;
-alert(dividedByTwo);
-let finalResult = dividedByTwo - Number(number);
-alert(finalResult);
-alert('Ответ равен 5');
+alert(`Полученное число делим на 2, получаем ${dividedByTwo}`);
+let finalResult = dividedByTwo - number;
+alert(`Из результата вычитаем первоначальное загаданное число, получаем ${finalResult}`);
+alert(`Ответ равен ${finalResult}`);
