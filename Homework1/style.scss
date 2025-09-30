@@ -16,10 +16,11 @@ body {
 
 a {
     color: $color-darkGray;
-    text-decoration: none;    
+    text-decoration: none;
 }
 
-a, button {
+a,
+button {
     cursor: url(images/pointer.png), pointer;
     transition: all 0.7s ease;
 }
@@ -47,20 +48,20 @@ a, button {
             height: 196px;
 
             & .star-small {
-                position: absolute;            
+                position: absolute;
                 width: 35px;
                 height: 35px;
                 top: 35%;
-                left: 36px;           
+                left: 36px;
             }
-            
+
             & .star-big {
-                position: absolute;            
+                position: absolute;
                 width: 57px;
                 height: 57px;
                 top: 48%;
                 left: -57px;
-                    
+
                 & svg {
                     fill: #BCEC30;
                 }
@@ -69,13 +70,13 @@ a, button {
 
         }
 
-    }       
+    }
 
     &__content {
         display: flex;
         flex-direction: column;
         max-width: 769px;
-    }    
+    }
 
     &__title {
         font-size: $size-64;
@@ -123,20 +124,20 @@ a, button {
             height: 156px;
 
             & .star-small {
-                position: absolute;            
+                position: absolute;
                 width: 37px;
                 height: 37px;
                 top: -10%;
                 left: 69%;
-                    
+
                 & svg {
                     fill: #BCEC30;
-                }            
+                }
 
             }
-            
+
             & .star-big {
-                position: absolute;            
+                position: absolute;
                 width: 83px;
                 height: 83px;
                 top: 9%;
@@ -145,7 +146,7 @@ a, button {
 
         }
 
-    }        
+    }
 
 }
 
@@ -209,21 +210,21 @@ main {
     &__stars {
         position: absolute;
         width: 71px;
-        height: 112px;        
+        height: 112px;
         top: 52.5%;
         left: -94px;
-        
+
         & .star-small {
             position: absolute;
             top: 0;
-            left: 0;            
+            left: 0;
         }
 
         & .star-big {
             position: absolute;
             bottom: 0;
-            right: 0;           
-        }        
+            right: 0;
+        }
 
     }
 
@@ -255,17 +256,18 @@ main {
         box-shadow: 0px 12.61px 42.25px -7.57px #00000021;
         transition: all 1s ease;
 
-        &_4, &_6 {
-            margin-top:-39px;
-        }        
-        
+        &_4,
+        &_6 {
+            margin-top: -39px;
+        }
+
         &:hover {
             transform: scale(1.07);
         }
 
         & img {
             border-radius: 30px;
-        }        
+        }
 
     }
 
@@ -273,7 +275,7 @@ main {
         position: absolute;
         width: 100%;
         height: 100%;
-        border-radius: 30px;            
+        border-radius: 30px;
     }
 
     &__details {
@@ -286,7 +288,7 @@ main {
         font-weight: $weight-500;
         background-color: #F7F7F7;
         border-radius: 53px;
-        padding: 8.5px 16.45px;    
+        padding: 8.5px 16.45px;
         margin-bottom: 18px;
     }
 
@@ -311,9 +313,6 @@ main {
     }
 
     &__stars {
-        position: absolute;
-        width: 100%;
-        height: 100%;
 
         &_top {
             position: absolute;
@@ -321,18 +320,18 @@ main {
             height: 107px;
             top: 97px;
             right: -72px;
-            
+
             & .star-small {
                 position: absolute;
                 top: 0;
-                left: 0;            
+                left: 0;
             }
 
             & .star-big {
                 position: absolute;
                 bottom: 0;
-                right: 0;          
-            }            
+                right: 0;
+            }
 
         }
 
@@ -342,20 +341,20 @@ main {
             height: 93px;
             bottom: 41px;
             right: -68px;
-            
+
             & .star-small {
                 position: absolute;
                 bottom: 0;
-                left: 0;            
+                left: 0;
             }
 
             & .star-big {
                 position: absolute;
                 top: 0;
-                right: 0;          
-            }            
+                right: 0;
+            }
 
-        }                
+        }
 
     }
 
@@ -364,7 +363,7 @@ main {
         flex-direction: column;
         row-gap: 32px;
         position: relative;
-        z-index: 1;     
+        z-index: 1;
     }
 
     &__item {
@@ -373,11 +372,11 @@ main {
         background-color: $color-white;
         border-radius: 30px;
         box-shadow: 0px 20px 67px -12px rgb(0 0 0 / 13%);
-        
+
         & div {
             width: 50%;
             max-height: 500px;
-            box-sizing: border-box;            
+            box-sizing: border-box;
         }
 
         &_even {
@@ -405,7 +404,7 @@ main {
         font-size: $size-48;
         font-weight: $weight-700;
         line-height: 1.22;
-        margin-bottom: 24px;        
+        margin-bottom: 24px;
     }
 
     &__text {
@@ -425,17 +424,18 @@ main {
         background-color: $color-darkGray;
         border: 1px solid $color-darkGray;
         border-radius: 60px;
+        font-family: "Montserrat", sans-serif;
         color: $color-white;
         font-weight: $weight-600;
         font-size: $size-24;
         box-sizing: border-box;
-        
+
         &:hover {
             background-color: $color-white;
             color: $color-black;
-        }        
-        
-    }    
+        }
+
+    }
 
 }
 

@@ -37,7 +37,7 @@ alert(result);
 
 a = 9;
 b = 2;
-c = a / b;
+c = a % b;
 alert(c);
 
 // Задание 7
@@ -71,7 +71,7 @@ alert(`Привет, ${userName}!`);
 
 // Дополнительное задание
 
-let number = prompt('Загадайте любое число');
+let number = Number(prompt('Загадайте любое число'));
 let doubledNumber = number * 2;
 alert(`Удваиваем загаданное число, получаем ${doubledNumber}`);
 let addTen = doubledNumber + 10;
