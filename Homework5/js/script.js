@@ -47,11 +47,13 @@ checkAge();
 // Задание 5
 
 function multiplyNumbers(a, b) {
+  let numA = Number(a);
+  let numB = Number(b);
 
-  if (isNaN(a) || isNaN(b)) {
-    console.log("Одно или оба значения не являются числом");
+  if (isNaN(numA) || isNaN(numB)) {
+    return 'Одно или оба значения не являются числом';
   } else {
-    return a * b;
+    return numA * numB;
   }
 }
 
