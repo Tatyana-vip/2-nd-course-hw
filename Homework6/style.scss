@@ -1,0 +1,456 @@
+@import 'vars';
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: $color-darkGray;
+}
+
+a {
+    color: $color-darkGray;
+    text-decoration: none;
+}
+
+a,
+button {
+    cursor: url(images/pointer.png), pointer;
+    transition: all 0.7s ease;
+}
+
+.center {
+    padding-left: calc(50% - 720px);
+    padding-right: calc(50% - 720px);
+}
+
+.container {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.top {
+    height: 710px;
+    background: #E1FF8F url(images/topback-right.png) no-repeat top right/contain;
+
+    &__stars {
+
+        &_top {
+            position: relative;
+            height: 196px;
+
+            & .star-small {
+                position: absolute;
+                width: 35px;
+                height: 35px;
+                top: 35%;
+                left: 36px;
+            }
+
+            & .star-big {
+                position: absolute;
+                width: 57px;
+                height: 57px;
+                top: 48%;
+                left: -57px;
+
+                & svg {
+                    fill: #BCEC30;
+                }
+
+            }
+
+        }
+
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        max-width: 769px;
+    }
+
+    &__title {
+        font-size: $size-64;
+        font-weight: $weight-700;
+        margin-bottom: 25px;
+    }
+
+    &__text {
+        font-size: $size-24;
+        font-weight: $weight-400;
+        line-height: 32px;
+        margin-bottom: 47px;
+
+        & span {
+            font-weight: $weight-600;
+        }
+
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 247px;
+        height: 66px;
+        background-color: $color-darkGray;
+        border: 1px solid $color-darkGray;
+        border-radius: 60px;
+        color: $color-white;
+        font-weight: $weight-600;
+        font-size: $size-24;
+        box-sizing: border-box;
+
+        &:hover {
+            background-color: $color-white;
+            color: $color-black;
+        }
+
+    }
+
+    &__stars {
+
+        &_bottom {
+            position: relative;
+            height: 156px;
+
+            & .star-small {
+                position: absolute;
+                width: 37px;
+                height: 37px;
+                top: -10%;
+                left: 69%;
+
+                & svg {
+                    fill: #BCEC30;
+                }
+
+            }
+
+            & .star-big {
+                position: absolute;
+                width: 83px;
+                height: 83px;
+                top: 9%;
+                left: 74.45%;
+            }
+
+        }
+
+    }
+
+}
+
+nav {
+    display: flex;
+    column-gap: 51px;
+    background-color: #BCEC30;
+    padding: 27px 49px;
+    overflow: hidden;
+
+    & a {
+        display: flex;
+        column-gap: 51px;
+        align-items: center;
+        font-size: 30px;
+        font-weight: $weight-700;
+        line-height: 1.2;
+        letter-spacing: 1.18px;
+        text-transform: uppercase;
+        white-space: nowrap;
+
+        &::after {
+            content: "";
+            width: 36px;
+            height: 36px;
+            background: url(images/star.svg) no-repeat;
+        }
+
+    }
+
+}
+
+main {
+    background-color: $color-darkGray;
+    background-image: url(images/star-main.png);
+    background-repeat: no-repeat;
+    background-position: 100% 111px;
+    background-size: 458px 568px;
+
+    & h2 {
+        font-size: $size-64;
+        font-weight: $weight-700;
+        color: $color-white;
+        text-align: left;
+    }
+
+}
+
+.game {
+
+    &__content {
+        position: relative;
+        padding: 95px 0 49px;
+
+        & h2 {
+            margin-bottom: 24px;
+        }
+
+    }
+
+    &__stars {
+        position: absolute;
+        width: 71px;
+        height: 112px;
+        top: 52.5%;
+        left: -94px;
+
+        & .star-small {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        & .star-big {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+    }
+
+    &__text {
+        margin-bottom: 70px;
+
+        & p {
+            font-size: $size-24;
+            font-weight: $weight-400;
+            line-height: 32px;
+            color: $color-white;
+        }
+
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
+        gap: 33px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: fit-content;
+        background-color: $color-white;
+        border-radius: 30px;
+        box-shadow: 0px 12.61px 42.25px -7.57px #00000021;
+        transition: all 1s ease;
+
+        &_4,
+        &_6 {
+            margin-top: -39px;
+        }
+
+        &:hover {
+            transform: scale(1.07);
+        }
+
+        & img {
+            border-radius: 30px;
+        }
+
+    }
+
+    &__link {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+    }
+
+    &__details {
+        padding: 30px 30px 35px;
+    }
+
+    &__number {
+        display: inline-block;
+        font-size: $size-16;
+        font-weight: $weight-500;
+        background-color: #F7F7F7;
+        border-radius: 53px;
+        padding: 8.5px 16.45px;
+        margin-bottom: 18px;
+    }
+
+    &__title {
+        font-size: $size-32;
+        font-weight: $weight-700;
+    }
+
+}
+
+.mini-game {
+
+    &__content {
+        position: relative;
+        padding-bottom: 145px;
+
+        & h2 {
+            padding-top: 48px;
+            padding-bottom: 71px;
+        }
+
+    }
+
+    &__stars {
+
+        &_top {
+            position: absolute;
+            width: 113px;
+            height: 107px;
+            top: 97px;
+            right: -72px;
+
+            & .star-small {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            & .star-big {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+
+        }
+
+        &_bottom {
+            position: absolute;
+            width: 139px;
+            height: 93px;
+            bottom: 41px;
+            right: -68px;
+
+            & .star-small {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+
+            & .star-big {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+
+        }
+
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        row-gap: 32px;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__item {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: $color-white;
+        border-radius: 30px;
+        box-shadow: 0px 20px 67px -12px rgb(0 0 0 / 13%);
+
+        & div {
+            width: 50%;
+            max-height: 500px;
+            box-sizing: border-box;
+        }
+
+        &_even {
+            flex-direction: row-reverse;
+        }
+
+    }
+
+    &__img {
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 30px;
+        }
+
+    }
+
+    &__details {
+        padding: 50px 47px;
+    }
+
+    &__title {
+        font-size: $size-48;
+        font-weight: $weight-700;
+        line-height: 1.22;
+        margin-bottom: 24px;
+    }
+
+    &__text {
+        font-size: $size-24;
+        font-weight: $weight-400;
+        line-height: 1.32;
+        margin-bottom: 36px;
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 247px;
+        max-width: 100%;
+        height: 66px;
+        background-color: $color-darkGray;
+        border: 1px solid $color-darkGray;
+        border-radius: 60px;
+        font-family: "Montserrat", sans-serif;
+        color: $color-white;
+        font-weight: $weight-600;
+        font-size: $size-24;
+        box-sizing: border-box;
+
+        &:hover {
+            background-color: $color-white;
+            color: $color-black;
+        }
+
+    }
+
+}
+
+footer {
+    background-color: #BDED35;
+    padding: 60px 0;
+
+    & p {
+        font-size: $size-24;
+        font-weight: $weight-600;
+        line-height: 1.25;
+        color: $color-black;
+        text-align: center;
+    }
+
+}
+
+@import 'adaptive';
