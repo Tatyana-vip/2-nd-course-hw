@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 20px;
+  padding: 20px 20px 50px;
+}
+
+.container {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+section {
+  border-bottom: 1px solid grey;
+  padding: 20px 0;
+}
+
+section:first-child {
+  padding-top: 0;
+}
+
+section:last-child {
+  border: none;
+}
+
+h1 {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+h1.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+button {
+  display: block;
+  width: 200px;
+  padding: 5px;
+  background-color: #3F51B5;
+  border: 1px solid #202027;
+  border-radius: 15px;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+#btn-add-paragraph {
+  margin-top: 0;
+}
